@@ -17,7 +17,7 @@ export default function Navbar() {
       <a class="mr-5 hover:text-gray-900">Third Link</a>
       <a class="mr-5 hover:text-gray-900">Fourth Link</a>
     </nav>
-    <ConnectWallet accentColor="brown"/>
+    <ConnectWallet accentColor="blue"/>
   </div>
 </header>
 )}
