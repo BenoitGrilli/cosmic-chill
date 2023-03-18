@@ -3,6 +3,7 @@ import Hero from './components/Hero';
 import { Routes, Route } from 'react-router-dom';
 import Gallery from './components/Gallery';
 import NavBar from './components/Navbar'
+import Home from "./pages/Home";
 
 function App() {
     return (
@@ -10,10 +11,12 @@ function App() {
             <NavBar/>
 
             <Routes>
-                <Route path='/gallery'  element={<Gallery/>} />
+                <Route path='/hero' element={<Hero/>} />
+                <Route path='/home' element={<Home/>} />
+                <Route path='/gallery' element={<Gallery/>} />
             </Routes>
             
-        
+    
         
         
         </>
