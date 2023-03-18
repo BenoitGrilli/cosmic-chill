@@ -1,6 +1,6 @@
 import React from "react";
 
-function HeroTwo() {
+function Accueil() {
   return (
     <section className="text-gray-600 body-font">
       <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
@@ -22,4 +22,4 @@ function HeroTwo() {
   );
 }
 
-export default HeroTwo;
+export default Accueil;
