@@ -13,7 +13,7 @@ export default function Navbar() {
       <a class="texte-black-500 font-bold py-2 px-4 hover:text-blue-500" href="/gallery">Gallery</a>
       <a class="texte-black-500 font-bold py-2 px-4 hover:text-blue-500" href="/gallery">Qui suis-je</a>
       {/* <button class="bg-gradient-to-r from-pink-500 to-blue-500 text-white font-bold py-2 px-4 rounded ">CONNECT WALLET</button> */}
-      <ConnectWallet  />;
+      <ConnectWallet  />
     </nav>
     </header>
     </ThirdwebProvider>
