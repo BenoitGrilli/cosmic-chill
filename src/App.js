@@ -2,8 +2,7 @@ import React from "react";
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Home from "./pages/Home";
 import CountDown from "./components/Countdown";
-import Accueil from "./components/Accueil";
-import SplashPage from "./components/SplashPage";
+import SplashPage from "./pages/SplashPage";
 import NavBar from './components/Navbar';
 import Hero from './components/Hero';
 import CountDownTwo from "./components/CountdownTwo";
@@ -15,19 +14,23 @@ import MyCarousel from "./components/MyCarousel";
 
 function App() {
   const location = useLocation();
-  const hideNavBar = location.pathname === '/splashpage' || location.pathname ==='/*';
+  const hideNavBar = location.pathname === '/' || location.pathname ==='/*';
 
   return (
     <>
 
       {hideNavBar ? null : <NavBar />}
       <Routes>
-      <Route path='/countdowntwo' element={<CountDownTwo/>} />
-        <Route path='/splashpage' element={<SplashPage/>} />
+        <Route path='/' element={<SplashPage/>} />
+        <Route path='/home' element={<Home/>} />
+
+
+
+        <Route path='/countdowntwo' element={<CountDownTwo/>} />
+        
         <Route path='/countdown' element={<CountDown seconds={100}/>} />
         <Route path='/hero' element={<Hero/>} />
-        <Route path='/accueil' element={<Accueil/>} />
-        <Route path='/home' element={<Home/>} />
+
         <Route path='/gallery' element={<MyCarousel/>} />
         <Route path='*' element={<Error404 />} />
         <Route path='minted' element={<Minted

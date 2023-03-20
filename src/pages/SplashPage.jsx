@@ -23,7 +23,7 @@ const SplashPage = () => {
         rounded bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500
         hover:scale-105 duration-300"
         >
-        <a className href="/gallery">VISIT</a>
+        <a className href="/home">VISIT</a>
         </button> 
       </div>
     </div>
