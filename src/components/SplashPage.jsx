@@ -17,8 +17,14 @@ const SplashPage = () => {
     
     
     <div style={backgroundStyle}>
-      <div className="flex justify-center items-center h-full">
-        <ConnectWallet />;
+      <div className="flex flex-col justify-center items-center h-full">
+      <ConnectWallet/>
+        <button className="m-10 text-white font-bold py-2 px-4 border border-blue-700 
+        rounded bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500
+        hover:scale-105 duration-300"
+        >
+        <a className href="/gallery">VISIT</a>
+        </button> 
       </div>
     </div>
     </ThirdwebProvider>
