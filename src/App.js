@@ -9,6 +9,9 @@ import CountDownTwo from "./components/CountdownTwo";
 import Error404 from "./pages/Error404";
 import Minted from "./components/Minted";
 import MyCarousel from "./components/MyCarousel";
+import Astronaut from "./components/Astronaut";
+import MintToken from "./pages/MintToken";
+import ButtonMint from "./components/ButtonMint";
 
 
 
@@ -19,12 +22,12 @@ function App() {
   return (
     <>
 
-      {hideNavBar ? null : <NavBar />}
+      {/* {hideNavBar ? null : <NavBar />} */}
       <Routes>
         <Route path='/' element={<SplashPage/>} />
         <Route path='/home' element={<Home/>} />
 
-
+        <Route path='/mintbutton' element={<ButtonMint/>} />
 
         <Route path='/countdowntwo' element={<CountDownTwo/>} />
         
@@ -40,6 +43,8 @@ function App() {
           assetId="1rj949940l1kd0ie095941"
           price="1.9"
         />} />
+        <Route path='/astronaut' element={<Astronaut />} />
+        <Route path='/mint' element={<MintToken />} />
         
       </Routes>
      
