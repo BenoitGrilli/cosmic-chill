@@ -13,11 +13,13 @@ import Astronaut from "./components/Astronaut";
 import MintToken from "./pages/MintToken";
 import ButtonMint from "./components/ButtonMint";
 
+import MintPage from "./pages/MintNFT";
+
 
 
 function App() {
   const location = useLocation();
-  const hideNavBar = location.pathname === '/' || location.pathname ==='/*';
+  // const hideNavBar = location.pathname === '/' || location.pathname ==='/*';
 
   return (
     <>
@@ -26,6 +28,8 @@ function App() {
       <Routes>
         <Route path='/' element={<SplashPage/>} />
         <Route path='/home' element={<Home/>} />
+
+        <Route path='/mint' element={<MintPage/>} />
 
         <Route path='/mintbutton' element={<ButtonMint/>} />
 
