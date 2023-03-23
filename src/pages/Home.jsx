@@ -3,11 +3,9 @@ import BuyButton from "../components/BuyButton";
 import Description from "../components/Description";
 import MyCarousel from "../components/MyCarousel";
 import 'animate.css';
-import TrackVisibility from 'react-on-screen';
 import Typewriter from 'typewriter-effect';
 import Navbar from "../components/Navbar";
 
-import { gsap } from "gsap";
 import Astronaut from "../components/Astronaut";
 
 

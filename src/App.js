@@ -14,7 +14,10 @@ import MintToken from "./pages/MintToken";
 import ButtonMint from "./components/ButtonMint";
 
 import MintPage from "./pages/MintNFT";
+import { ThirdwebAuthProvider, ThirdwebProvider } from "@thirdweb-dev/react";
+import { Zhejiang } from "@thirdweb-dev/chains";
 
+import UnderConstruction from "./components/UnderConstruction";
 
 
 function App() {
@@ -23,12 +26,11 @@ function App() {
 
   return (
     <>
-
+    <ThirdwebProvider activeChain={ Zhejiang }>
       {/* {hideNavBar ? null : <NavBar />} */}
       <Routes>
         <Route path='/' element={<SplashPage/>} />
         <Route path='/home' element={<Home/>} />
-
         <Route path='/mint' element={<MintPage/>} />
 
         <Route path='/mintbutton' element={<ButtonMint/>} />
@@ -51,7 +53,8 @@ function App() {
         <Route path='/mint' element={<MintToken />} />
         
       </Routes>
-     
+      <UnderConstruction/>
+    </ThirdwebProvider>
     </>
   );
 }

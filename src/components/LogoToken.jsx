@@ -1,3 +1,4 @@
+import { ConnectWallet, ThirdwebProvider } from "@thirdweb-dev/react";
 import Logo from "../images/logo-token.png";
 
 const LogoToken = () => {
@@ -13,6 +14,9 @@ export default function LogoToken() {
    
    
     return (
+      <ThirdwebProvider>
+        <ConnectWallet></ConnectWallet>
+      </ThirdwebProvider>
         
     )
 };
