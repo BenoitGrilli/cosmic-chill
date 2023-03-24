@@ -22,7 +22,7 @@ import YourCollection from "./pages/YourCollection";
 import NFT from "./pages/NFT"
 
 import Navbar from "./components/Navbar";
-import GetSupply from "./components/Getsupply";
+import GetSupply from "./contract-component/Getsupply";
 
 function App() {
   const location = useLocation();

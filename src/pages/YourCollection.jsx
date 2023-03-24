@@ -1,5 +1,5 @@
 import { ConnectWallet, useContract, useNFTs, useMintNFT, Web3Button, ThirdwebNftMedia, useOwnedNFTs, useAddress } from "@thirdweb-dev/react"
-import GetBalanceWallet from "../components/Getsupply";
+import GetBalanceWallet from "../contract-component/Getsupply";
 
 
 export default function YourCollection() {

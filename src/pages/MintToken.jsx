@@ -29,7 +29,10 @@ const MintToken = () => {
                alt="hero" src="/images/logo-token.png"></img>
               <div class="text-center lg:w-2/3 w-full">
   
-              <ButtonTemplate text="MINT NOW" />
+              <h1>
+              <ButtonTemplate/>
+              </h1>
+              
                
               </div>
           </div>
