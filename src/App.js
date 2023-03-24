@@ -18,6 +18,7 @@ import { ThirdwebAuthProvider, ThirdwebProvider } from "@thirdweb-dev/react";
 import { Zhejiang } from "@thirdweb-dev/chains";
 
 import UnderConstruction from "./components/UnderConstruction";
+import YourCollection from "./components/YourCollection";
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
         <Route path='/home' element={<Home/>} />
         <Route path='/mint' element={<MintPage/>} />
 
+        <Route path='/yourcollection' element={<YourCollection/>} />
         <Route path='/mintbutton' element={<ButtonMint/>} />
 
         <Route path='/countdowntwo' element={<CountDownTwo/>} />
