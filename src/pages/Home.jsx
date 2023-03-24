@@ -23,7 +23,7 @@ function Home() {
   return (
     <>
  <section className="text-gray-600 body-font" style={backgroundStyle}>
-      <Navbar/>
+ 
       <div className="container mx-auto flex mb-56 first-letter:px-5 pt-4 md:flex-row flex-col items-center">
         <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
           {/* <img className= "pl-10 object-cover object-center rounded h-96 scale-125" alt="hero" src="/images/chilling astronaut.png" />     */}

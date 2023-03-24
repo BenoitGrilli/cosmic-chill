@@ -18,8 +18,11 @@ import { ThirdwebAuthProvider, ThirdwebProvider } from "@thirdweb-dev/react";
 import { Zhejiang } from "@thirdweb-dev/chains";
 
 import UnderConstruction from "./components/UnderConstruction";
-import YourCollection from "./components/YourCollection";
+import YourCollection from "./pages/YourCollection";
+import NFT from "./pages/NFT"
 
+import Navbar from "./components/Navbar";
+import GetSupply from "./components/Getsupply";
 
 function App() {
   const location = useLocation();
@@ -27,14 +30,19 @@ function App() {
 
   return (
     <>
+    
     <ThirdwebProvider activeChain={ Zhejiang }>
+    <Navbar/>
       {/* {hideNavBar ? null : <NavBar />} */}
-      <Routes>
+      <Routes>   
         <Route path='/' element={<SplashPage/>} />
         <Route path='/home' element={<Home/>} />
         <Route path='/mint' element={<MintPage/>} />
 
-        <Route path='/yourcollection' element={<YourCollection/>} />
+
+        <Route path='/supply' element={<GetSupply/>} />
+        <Route path='/nft' element={<NFT/>} />
+        <Route path='/mycollection' element={<YourCollection/>} />
         <Route path='/mintbutton' element={<ButtonMint/>} />
 
         <Route path='/countdowntwo' element={<CountDownTwo/>} />
