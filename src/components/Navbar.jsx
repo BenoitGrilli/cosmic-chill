@@ -16,7 +16,7 @@ export default function Navbar() {
       {/* <a class="texte-black-500 font-bold py-2 px-4 hover:text-blue-500 " href="/gallery">Mint</a> */}
       
       <a class=" font-bold py-2 px-4 hover:text-blue-500" href="/mycollection">MY COLLECTION</a>
-      <a class=" font-bold py-2 px-4 hover:text-blue-500" href="/nft">GALLERY</a>
+      <a class=" font-bold py-2 px-4 hover:text-blue-500" href="/gallery">GALLERY</a>
       <a class=" font-bold py-2 px-4 hover:text-blue-500" href="/mint">MINT</a>
   
       {/* <a class="texte-black-500 font-bold py-2 px-4 hover:text-blue-500" href="/gallery">Qui suis-je</a> */}

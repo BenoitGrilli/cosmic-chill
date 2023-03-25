@@ -7,8 +7,18 @@ import GetTotalMinted from "../contract-component/GetTotalMinted";
 import GetContractAddress from "../contract-component/GetContractAddress";
 import GetBalanceOf from "../contract-component/GetBalanceOf";
 import ButtonTemplate from "../components/ButtonTemplate";
+import SomethingWentWrong from "./SomethingWentWrong";
 
-const contractAddress = "0x12E0bFcC3c4D7cbbA8636464AAFa1044b20ddA0F"
+import backgroundImage from "../images/background-2.jpg";
+
+const contractAddress = "0x12E0bFcC3c4D7cbbA8636464AAFa1044b20ddA0F";
+
+
+const backgroundStyle = {
+  backgroundImage: `url(${backgroundImage})`,
+  backgroundSize: "cover",
+  backgroundPosition: "center",
+  height: "",}
 
 
 export default function MintPage() {
@@ -26,19 +36,26 @@ const address = useAddress();
 // hook les nft d'un user 
 const { data: nfts, isLoading, isError } = useOwnedNFTs(contract, address);
 
+
 if (isError) {
   return (
     <div>
-      <p>Something went wrong. Try to connect your wallet</p>
-      <ConnectWallet/>
+      <SomethingWentWrong/>
     </div>
   )
 }
 
 return(
+<>
+
+<div style={backgroundStyle}>
+
+
 <div className="mx-auto flex min-h-screen max-w-6xl flex-col p-6 md:p-12">
         <header className="flex flex-col items-center justify-center pt-2">
         <h1 className="ml-3 text-5xl font-medium pb-2">GET YOUR COSMIC NFT</h1>
+        
+
         <GetContractAddress/>
 
         <div className="mt-5 text-2xl p-5 text-center">
@@ -88,6 +105,8 @@ return(
           <h1>Benoit GRILLI</h1>
         </footer>
       </div>
+      </div>
+      </>
 )}
 
 
