@@ -22,7 +22,6 @@ if (isError) {
 
 return(
 <div>
-<ConnectWallet accentColor="blue" colorMode="light"/>
 <h1 className="pt-8 text-center">NFT ALREADY MINTED</h1>
     {isLoading ? (
         <p> Loading ... </p>

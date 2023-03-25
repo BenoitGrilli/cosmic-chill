@@ -1,0 +1,46 @@
+import React from "react";
+import backgroundImage from "../images/space-mint.png";
+import { ThirdwebProvider } from "@thirdweb-dev/react";
+import { ConnectWallet } from "@thirdweb-dev/react";
+import BuyButton from "../components/BuyButton";
+import ButtonTemplate from "../components/ButtonTemplate";
+import Navbar from "../components/Navbar";
+
+
+const goerli = "https://zhejiang.beaconcha.in/address/0x12e0bfcc3c4d7cbba8636464aafa1044b20dda0f"
+const goerliLink = (
+  <a className = "text-blue-600" href={goerli} target="_blank" rel="noopener noreferrer">
+    {goerli}
+  </a>)
+
+const MintToken = () => {
+  const backgroundStyle = {
+    backgroundImage: `url(${backgroundImage})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    height: "90vh",
+  };
+
+  return (
+    <>
+        <div style={backgroundStyle}>
+        <section className="text-gray-600 body-font">
+      <div className="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
+        <img className="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded " alt="planet token
+        " src="/images/logo-token.png" />
+        <div className="text-center lg:w-2/3 w-full">
+          <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">Planets tokens are used to mint Cosmic Chill NFTs</h1>
+          <p className="mb-8 leading-relaxed text-white">claim yours for free. (you need goerli in your wallet to make the transaction)</p>
+          <div className="flex justify-center">
+            <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">PLANET FAUCET</button>
+            <button className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg"><a>GOERLI</a>{goerliLink}</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    </div>
+    </>
+    )
+};
+
+export default MintToken;

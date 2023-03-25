@@ -5,7 +5,8 @@ import Description from "../components/Description";
 import GetSupply from "../contract-component/Getsupply";
 import GetTotalMinted from "../contract-component/GetTotalMinted";
 import GetContractAddress from "../contract-component/GetContractAddress";
-
+import GetBalanceOf from "../contract-component/GetBalanceOf";
+import ButtonTemplate from "../components/ButtonTemplate";
 
 const contractAddress = "0x12E0bFcC3c4D7cbbA8636464AAFa1044b20ddA0F"
 
@@ -28,17 +29,24 @@ const { data: nfts, isLoading, isError } = useOwnedNFTs(contract, address);
 if (isError) {
   return (
     <div>
-      <p>Something went wrong</p>
+      <p>Something went wrong. Try to connect your wallet</p>
+      <ConnectWallet/>
     </div>
   )
 }
 
 return(
 <div className="mx-auto flex min-h-screen max-w-6xl flex-col p-6 md:p-12">
-        <header className="flex flex-col items-center justify-center p-6 md:p-12">
-        <h1 className="ml-3 text-2xl pb-5">Cosmic Chill</h1>
-        <GetTotalMinted/>
+        <header className="flex flex-col items-center justify-center pt-2">
+        <h1 className="ml-3 text-5xl font-medium pb-2">GET YOUR COSMIC NFT</h1>
         <GetContractAddress/>
+
+        <div className="mt-5 text-2xl p-5 text-center">
+        <GetTotalMinted/>
+        <GetBalanceOf/>
+        </div>
+
+   
          </header>
          <main className="grid gap-6 rounded-md bg-black/20 p-6 md:grid-cols-2 md:p-12">
            <div className="flex flex-col items-center justify-center space-y-6">
@@ -60,12 +68,17 @@ return(
                  <GetTotalMinted/>
                </div>
 
-               <div className="flex justify-center">
+               <div className="flex flex-col justify-center">
                  <Web3Button
                   contractAddress={contractAddress}
                   action={(contract) => {contract.erc721.claim(1)}}
                 >
                 Mint</Web3Button>
+                <p className="text-pink-500 mt-2 text-center">You need 1 PLANET TOKEN TO MINT 1 NFT</p>
+                
+                <ButtonTemplate text="GET PLANET TOKEN"/>
+                
+  
               </div>
             </div>
           </div>

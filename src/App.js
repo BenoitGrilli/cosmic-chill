@@ -10,7 +10,7 @@ import Error404 from "./pages/Error404";
 import Minted from "./components/Minted";
 import MyCarousel from "./components/MyCarousel";
 import Astronaut from "./components/Astronaut";
-import MintToken from "./pages/MintToken";
+import MintToken from "./pages/Faucet";
 import ButtonMint from "./components/ButtonMint";
 
 import MintPage from "./pages/MintNFT";
@@ -23,6 +23,7 @@ import NFT from "./pages/NFT"
 
 import Navbar from "./components/Navbar";
 import GetSupply from "./contract-component/Getsupply";
+import Faucet from "./pages/Faucet";
 
 function App() {
   const location = useLocation();
@@ -49,8 +50,6 @@ function App() {
         
         <Route path='/countdown' element={<CountDown seconds={100}/>} />
         <Route path='/hero' element={<Hero/>} />
-
-        <Route path='/gallery' element={<MyCarousel/>} />
         <Route path='*' element={<Error404 />} />
         <Route path='minted' element={<Minted
           image="/images/43.png"
@@ -60,7 +59,7 @@ function App() {
           price="1.9"
         />} />
         <Route path='/astronaut' element={<Astronaut />} />
-        <Route path='/mint' element={<MintToken />} />
+        <Route path='/faucet' element={<Faucet />} />
         
       </Routes>
       <UnderConstruction/>
