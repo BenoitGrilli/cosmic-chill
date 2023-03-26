@@ -12,6 +12,7 @@ import NFTCard from "../components/NFTCARD";
 import GetContractAddress from "../contract-component/GetContractAddress";
 import SomethingWentWrong from "./SomethingWentWrong";
 import backgroundImage from "../images/background-5.png";
+import Navbar from "../components/Navbar";
 
 
 const backgroundStyle = {
@@ -41,6 +42,7 @@ export default function YourCollection() {
   return (
     <>
       <div style={backgroundStyle}>
+        <Navbar/>
         <div className="text-center text-white">
           <h1 className="pt-8 text-4xl">YOUR COLLECTION</h1>
           <GetContractAddress />

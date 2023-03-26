@@ -12,7 +12,7 @@ const contractUrl = "https://zhejiang.beaconcha.in/address/0x12e0bfcc3c4d7cbba86
     
     return (
       <div>
-        <p>contract address is : {contractLink} </p> 
+        <p className='text-white'>contract address is : {contractLink} </p> 
       </div> 
     )
   }

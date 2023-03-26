@@ -1,8 +1,8 @@
 import { ConnectWallet, useContract, useNFTs, useMintNFT, Web3Button, ThirdwebNftMedia, useOwnedNFTs, useAddress } from "@thirdweb-dev/react"
 import SomethingWentWrong from "./SomethingWentWrong";
 import GetContractAddress from "../contract-component/GetContractAddress";
-import backgroundImage from "../images/background-1.png";
-
+import backgroundImage from "../images/banner0.png";
+import Navbar from "../components/Navbar";
 export default function Gallery() {
 
 const { contract } = useContract("0x12E0bFcC3c4D7cbbA8636464AAFa1044b20ddA0F");
@@ -30,7 +30,8 @@ if (isError) {
   }
 
 return(
-<div style={backgroundStyle}>
+<div className=" text-white" style={backgroundStyle}>
+<Navbar />
     <div className="text-center">
       <h1 className="pt-8 text-4xl">GALLERY</h1>
       <GetContractAddress/>

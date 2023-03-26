@@ -10,6 +10,7 @@ import ButtonTemplate from "../components/ButtonTemplate";
 import SomethingWentWrong from "./SomethingWentWrong";
 
 import backgroundImage from "../images/background-2.jpg";
+import Navbar from "../components/Navbar";
 
 const contractAddress = "0x12E0bFcC3c4D7cbbA8636464AAFa1044b20ddA0F";
 
@@ -49,16 +50,16 @@ return(
 <>
 
 <div style={backgroundStyle}>
-
+<Navbar/>
 
 <div className="mx-auto flex min-h-screen max-w-6xl flex-col p-6 md:p-12">
         <header className="flex flex-col items-center justify-center pt-2">
-        <h1 className="ml-3 text-5xl font-medium pb-2">GET YOUR COSMIC NFT</h1>
+        <h1 className="text-white ml-3 text-5xl font-medium pb-2">GET YOUR COSMIC NFT</h1>
         
 
         <GetContractAddress/>
 
-        <div className="mt-5 text-2xl p-5 text-center">
+        <div className=" text-white mt-5 text-2xl p-5 text-center">
         <GetTotalMinted/>
         <GetBalanceOf/>
         </div>
@@ -67,11 +68,11 @@ return(
          </header>
          <main className="grid gap-6 rounded-md bg-black/20 p-6 md:grid-cols-2 md:p-12">
            <div className="flex flex-col items-center justify-center space-y-6">
-             <h1 className="text-2xl font-bold text-secondary">
+             <h1 className="text-white text-2xl font-bold text-secondary">
                Mint your NFT
              </h1>
              <p className="text-center leading-relaxed">
-               <Description className = "text-black"/>
+               <Description color="white"/>
              </p>
            </div>
   
@@ -93,14 +94,14 @@ return(
                 Mint</Web3Button>
                 <p className="text-pink-500 mt-2 text-center">You need 1 PLANET TOKEN TO MINT 1 NFT</p>
                 
-                <ButtonTemplate text="GET PLANET TOKEN"/>
+                <ButtonTemplate to="/faucet" text="GET PLANET TOKEN"/>
                 
   
               </div>
             </div>
           </div>
         </main>
-        <footer className="flex items-center justify-center space-x-2 p-6">
+        <footer className="text-white flex items-center justify-center space-x-2 p-6">
           <p className="text-sm">Powered by</p>
           <h1>Benoit GRILLI</h1>
         </footer>

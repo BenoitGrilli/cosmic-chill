@@ -20,7 +20,7 @@ const contractAddress  = "0x12E0bFcC3c4D7cbbA8636464AAFa1044b20ddA0F"
             {isLoading ?
               <p>Loading ...</p>
             :
-        <p>Total minted : {data.toString()} / 200 </p> 
+        <p className='text-white'>Total minted : {data.toString()} / 200 </p> 
         }
       </div>    
     ) 

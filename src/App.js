@@ -25,6 +25,7 @@ import GetSupply from "./contract-component/Getsupply";
 import Faucet from "./pages/Faucet";
 
 import Gallery from "./pages/Gallery";
+import Description from "./components/Description";
 
 function App() {
   const location = useLocation();
@@ -33,7 +34,7 @@ function App() {
   return (
     <>
       <ThirdwebProvider activeChain={Zhejiang}>
-        <Navbar />
+       
         {/* {hideNavBar ? null : <NavBar />} */}
         <Routes>
           <Route path="/" element={<SplashPage />} />
@@ -46,6 +47,8 @@ function App() {
           <Route path="/mintbutton" element={<ButtonMint />} />
 
           <Route path="/countdowntwo" element={<CountDownTwo />} />
+
+          <Route path="/description" element={<Description />} />
 
           <Route path="/countdown" element={<CountDown seconds={100} />} />
           <Route path="/hero" element={<Hero />} />

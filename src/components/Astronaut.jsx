@@ -19,7 +19,10 @@ const Astronaut = () => {
     );
   }, []);
 
-  return <img ref={imgRef} src="/images/chilling astronaut.png" alt="Chilling Astronaut" />;
+  return (
+  <img ref={imgRef} src="/images/chilling astronaut.png" alt="Chilling Astronaut" />
+  
+  );
 };
 
 export default Astronaut;
