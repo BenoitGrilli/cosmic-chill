@@ -3,11 +3,17 @@ import Typewriter from "typewriter-effect";
 
 function WelcomeTyping() {
   return (
-    <h1 className="pt-48 sm:text-8xl text-3xl mb-4 font-medium text-white" style={{ fontFamily: "'Anton', sans-serif" }}>
+
+    <>
+    <div className="flex justify-center pt-8 sm:text-8xl text-3xl mb-0 font-medium text-white">
       Welcome to
-      <Typewriter
+    </div>
+    <h1 className="flex justify-center sm:text-8xl text-3xl mb-4 font-medium text-white" style={{ fontFamily: "'Anton', sans-serif" }}>
+    
+       <Typewriter
         options={{
-          strings: [
+          strings: [ 
+           
             "COSMIC CHILL",
             "SPACE",
             "THE METAVERSE",
@@ -17,7 +23,9 @@ function WelcomeTyping() {
           loop: true,
         }}
       />
+      
     </h1>
+    </>
   );
 }
 

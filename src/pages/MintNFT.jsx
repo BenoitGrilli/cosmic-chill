@@ -1,8 +1,7 @@
 import previewGIF from "../images/cosmic-chill-gif.gif";
 
-import { ConnectWallet, useContract, useNFTs, useMintNFT, Web3Button, ThirdwebNftMedia, useOwnedNFTs, useAddress } from "@thirdweb-dev/react"
-import Description from "../components/Description";
-import GetSupply from "../contract-component/Getsupply";
+import { useContract, useMintNFT, Web3Button, useOwnedNFTs, useAddress } from "@thirdweb-dev/react"
+
 import GetTotalMinted from "../contract-component/GetTotalMinted";
 import GetContractAddress from "../contract-component/GetContractAddress";
 import GetBalanceOf from "../contract-component/GetBalanceOf";
@@ -72,8 +71,24 @@ return(
                Mint your NFT
              </h1>
              <p className="text-center leading-relaxed">
-               <Description color="white"/>
+             <p className="text-lg font-bold text-white mb-2">
+        Get your own Cosmic Chill NFT today and enjoy:
+      </p>
+      <ul className="list-disc pl-8 mb-8 text-left">
+        <li className="text-lg text-gray-200">
+          Access to a one-of-a-kind digital art collection
+        </li>
+        <li className="text-lg text-gray-200">
+          Exclusive ownership of a unique beach in the metaverse
+        </li>
+        <li className="text-lg text-gray-200">
+          A chance to join a community of like-minded space explorers
+        </li>
+      </ul>
              </p>
+             <p className="text-pink-500 mt-2 text-center">You need 1 PLANET TOKEN TO MINT 1 NFT</p>
+                
+                <ButtonTemplate to="/faucet" text="GET PLANET TOKEN FOR FREE"/>
            </div>
   
            <div className="flex flex-col items-center">
@@ -92,9 +107,7 @@ return(
                   action={(contract) => {contract.erc721.claim(1)}}
                 >
                 Mint</Web3Button>
-                <p className="text-pink-500 mt-2 text-center">You need 1 PLANET TOKEN TO MINT 1 NFT</p>
-                
-                <ButtonTemplate to="/faucet" text="GET PLANET TOKEN"/>
+               
                 
   
               </div>

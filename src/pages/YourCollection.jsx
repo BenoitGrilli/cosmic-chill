@@ -1,35 +1,28 @@
 import {
-  ConnectWallet,
   useContract,
-  useNFTs,
-  useMintNFT,
-  Web3Button,
   ThirdwebNftMedia,
   useOwnedNFTs,
   useAddress,
 } from "@thirdweb-dev/react";
-import NFTCard from "../components/NFTCARD";
+
 import GetContractAddress from "../contract-component/GetContractAddress";
 import SomethingWentWrong from "./SomethingWentWrong";
-import backgroundImage from "../images/background-5.png";
+
 import Navbar from "../components/Navbar";
+import BorderCard from "../components/BorderCard";
+import GetUserAddress from "../contract-component/GetUserAddress";
 
-
-const backgroundStyle = {
-  backgroundImage: `url(${backgroundImage})`,
-  backgroundSize: "cover",
-  backgroundPosition: "center",
-  height: "100vh",}
 
 export default function YourCollection() {
+  const background = "bg-gradient-to-b from-blue-900 via-indigo-900 to-purple-900";
   const { contract } = useContract(
     "0x12E0bFcC3c4D7cbbA8636464AAFa1044b20ddA0F"
   );
   const address = useAddress();
 
-  
   // hook les nft d'un user
   const { data: nfts, isLoading, isError } = useOwnedNFTs(contract, address);
+  
 
   if (isError) {
     return (
@@ -41,35 +34,35 @@ export default function YourCollection() {
 
   return (
     <>
-      <div style={backgroundStyle}>
-        <Navbar/>
-        <div className="text-center text-white">
-          <h1 className="pt-8 text-4xl">YOUR COLLECTION</h1>
-          <GetContractAddress />
+      <div className={background}>
+        <Navbar />
+        <div className="py-20 text-center">
+          <h1 className="text-white text-4xl font-bold mb-8">YOUR COLLECTION</h1>
+          <div className="flex flex-col items-center">
+            <GetContractAddress />
+            <GetUserAddress />
+          </div>
         </div>
 
         {isLoading ? (
-          <p className="text-center text-2xl"> Loading ... </p>
+          <p className="text-white text-center text-2xl" > Loading ... </p>
         ) : (
-          <div className="mx-auto flex flex-row flex-wrap">
-            {nfts
+          <div class="mx-auto flex flex-row flex-wrap justify-center items-center">
+          {nfts
               ?.filter((nft) => nft.owner == address)
               .map((nft) => (
                 <div className="p-6 md:p-6">
-                  <div className="max-w-md mx-auto my-10 border border-white border-opacity-25 bg-gradient-to-r from-gray-900 via-purple-900 to-gray-900 shadow-lg rounded-xl backdrop-blur-lg">
-                    <ThirdwebNftMedia
-                      key={nft.id}
-                      metadata={nft.metadata}
-                      height={200}
-                    />
-                    <h2 className="text-center text-2xl font-bold my-4 text-white">
-                      {nft.metadata.name}
-                    </h2>
-                    <p className="p-3 text-s text-purple-300 ml-2">
-                      <span className="font-bold">owned by</span>
-                      <p>{nft.owner}</p>
-                    </p>
-                  </div>
+                  <BorderCard>
+                    <ThirdwebNftMedia key={nft.id} metadata={nft.metadata} />
+                  </BorderCard>
+
+                  <BorderCard className="mt-6">         
+                    <h1 className="text-center text-2xl font-bold">
+                      #{nft.metadata.id}
+                    </h1>
+                    <p className="text-center font-bold mb-2">owned by</p>
+                    <p className="text-center">{nft.owner}</p>
+                  </BorderCard>
                 </div>
               ))}
           </div>

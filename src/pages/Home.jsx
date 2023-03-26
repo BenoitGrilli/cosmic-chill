@@ -8,6 +8,7 @@ import Navbar from "../components/Navbar";
 
 import Astronaut from "../components/Astronaut";
 import ButtonTemplate from "../components/ButtonTemplate";
+import WelcomeTyping from "../components/WelcomeTyping"
 
 
 function Home() {
@@ -23,11 +24,16 @@ function Home() {
     <div>
 
       <section className="text-gray-600 body-font" style={backgroundStyle}>
-      <Navbar />
+      <Navbar /> 
+      <WelcomeTyping/>
+
       
-        <div class="pr-12 pl-12 pt-2 flex flex-col md:flex-row">
+        <div class="pr-6 pl-6 pt-0 flex flex-col md:flex-row">
           <div class="w-full md:w-1/2">
             <Astronaut />
+            <div className="flex justify-center">
+      <ButtonTemplate to="/gallery" text="COLLECTION"/>
+      </div>
           </div>
           <div>
   

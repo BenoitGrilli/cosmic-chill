@@ -5,7 +5,7 @@ const contractUrl = "https://zhejiang.beaconcha.in/address/0x12e0bfcc3c4d7cbba86
 
  export default function GetContractAddress() {
   const contractLink = (
-      <a className = "text-blue-600" href={contractUrl} target="_blank" rel="noopener noreferrer">
+      <a className = "text-sky-200" href={contractUrl} target="_blank" rel="noopener noreferrer">
         {contractAddress}
       </a>
     );

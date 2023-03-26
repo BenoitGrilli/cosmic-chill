@@ -1,5 +1,5 @@
-import React, { useRef, useEffect } from 'react';
-import { gsap, Power1 } from 'gsap';
+import React, { useRef, useEffect } from "react";
+import { gsap, Power1 } from "gsap";
 
 const Astronaut = () => {
   const imgRef = useRef(null);
@@ -20,8 +20,11 @@ const Astronaut = () => {
   }, []);
 
   return (
-  <img ref={imgRef} src="/images/chilling astronaut.png" alt="Chilling Astronaut" />
-  
+    <img
+      ref={imgRef}
+      src="/images/chilling astronaut.png"
+      alt="Chilling Astronaut"
+    />
   );
 };
 

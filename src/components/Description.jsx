@@ -3,7 +3,7 @@ import ButtonTemplate from "./ButtonTemplate";
 
 function Description() {
   return (
-    <div className="max-w-3xl mx-auto bg-violet-900 bg-opacity-25 py-12 px-8 rounded-lg">
+    <div className="max-w-3xl mx-auto bg-violet-900 bg-opacity-25 py-6 px-8 rounded-lg">
       <p className="text-3xl font-bold text-white mb-4">Discover Cosmic Chill</p>
       <p className="text-lg text-gray-200 mb-8">
         A unique collection of digital art that takes you on a journey to
@@ -29,9 +29,7 @@ function Description() {
           A chance to join a community of like-minded space explorers
         </li>
       </ul>
-      <div>
-      <ButtonTemplate to="/gallery" text="VOIR LA COLLECTION"/>
-      </div>
+
   
     </div>
   );

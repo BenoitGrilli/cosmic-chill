@@ -1,8 +1,10 @@
-import { ConnectWallet, useContract, useNFTs, useMintNFT, Web3Button, ThirdwebNftMedia, useOwnedNFTs, useAddress } from "@thirdweb-dev/react"
+import {useContract, useNFTs, ThirdwebNftMedia, useAddress } from "@thirdweb-dev/react"
 import SomethingWentWrong from "./SomethingWentWrong";
 import GetContractAddress from "../contract-component/GetContractAddress";
 import backgroundImage from "../images/banner0.png";
 import Navbar from "../components/Navbar";
+import BorderCard from "../components/BorderCard";
+
 export default function Gallery() {
 
 const { contract } = useContract("0x12E0bFcC3c4D7cbbA8636464AAFa1044b20ddA0F");
@@ -40,14 +42,22 @@ return(
   {isLoading ? (
     <p className="text-center text-2xl"> Loading ... </p>
   ) : (
-    <div className="mx-auto flex flex-row flex-wrap">
+   <div class="mx-auto flex flex-row flex-wrap justify-center items-center">
       {nfts?.map((nft) => (
-        <div className="p-6 md:p-12">
+        <div >
           <div>
+          <BorderCard>
             <ThirdwebNftMedia key={nft.id} metadata={nft.metadata} height={200} />
-            <p className="p-3">{nft.metadata.name}</p>
-            <p>owned by</p>
-            <p>{nft.owner}</p>
+            </BorderCard>
+
+            <BorderCard>
+            <h1 className="text-center text-2xl font-bold">
+                      #{nft.metadata.id}
+                    </h1>
+            <p className="text-center font-bold mb-2">owned by</p>
+            <p className="text-center">{nft.owner}</p>
+            </BorderCard>
+            
           </div>
         </div>
       ))}

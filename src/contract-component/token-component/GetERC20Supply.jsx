@@ -1,9 +1,9 @@
 import React from 'react';
 import { useContractRead, useContract } from "@thirdweb-dev/react";
 
-const contractAddress  = "0x12E0bFcC3c4D7cbbA8636464AAFa1044b20ddA0F"
+const contractAddress  = "0xB6Ba71907421B9e244e35a26cDE4Db3535316BCc"
 
- export default function GetSupply() {
+ export default function GetSupplyERC20() {
   const { contract } = useContract(contractAddress);
   const { data, isLoading, isError } = useContractRead(contract, "totalSupply");
 
@@ -18,9 +18,9 @@ const contractAddress  = "0x12E0bFcC3c4D7cbbA8636464AAFa1044b20ddA0F"
     return (
       <div>
             {isLoading ?
-              <p className='text-white'>Loading ...</p>
+            <p className='text-white'>Loading ...</p>
             :
-        <p className='text-white'>Supply is : {data.toString()} </p> 
+            <p className='text-white'>Total Supply is : {Number(data.toString()) / 10**18} PLT  </p> 
         }
       </div>
     )
