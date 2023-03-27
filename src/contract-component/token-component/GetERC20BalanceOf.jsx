@@ -1,7 +1,9 @@
 import React from 'react';
 import { useContractRead, useContract, useAddress } from "@thirdweb-dev/react";
 
-const contractAddress  = "0xB6Ba71907421B9e244e35a26cDE4Db3535316BCc"
+
+const contractAddress  = "0xb3c620d9379eb50ad53e71C549bd1cfC0e796597"
+
 
 
  export default function GetERC20BalanceOf() {
@@ -11,7 +13,7 @@ const contractAddress  = "0xB6Ba71907421B9e244e35a26cDE4Db3535316BCc"
 
   if (isError) {
     return (
-      <div>e
+      <div>
         <p className='text-white'>Something went wrong</p>
       </div>
     )

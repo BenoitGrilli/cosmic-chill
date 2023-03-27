@@ -1,7 +1,6 @@
 import React from 'react';
+import {contractAddress, contractUrl} from '../components/contract';
 
-const contractAddress  = "0x12E0bFcC3c4D7cbbA8636464AAFa1044b20ddA0F"
-const contractUrl = "https://zhejiang.beaconcha.in/address/0x12e0bfcc3c4d7cbba8636464aafa1044b20dda0f"
 
  export default function GetContractAddress() {
   const contractLink = (

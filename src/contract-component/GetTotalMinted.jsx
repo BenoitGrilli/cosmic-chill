@@ -1,7 +1,8 @@
 import React from 'react';
 import { useContractRead, useContract } from "@thirdweb-dev/react";
+import {contractAddress} from '../components/contract';
 
-const contractAddress  = "0x12E0bFcC3c4D7cbbA8636464AAFa1044b20ddA0F"
+
 
  export default function GetTotalMinted() {
   const { contract } = useContract(contractAddress);
@@ -20,7 +21,7 @@ const contractAddress  = "0x12E0bFcC3c4D7cbbA8636464AAFa1044b20ddA0F"
             {isLoading ?
               <p className='text-white'>Loading ...</p>
             :
-        <p className='text-white'>Total minted : {data.toString()} / 200 </p> 
+        <p className='text-white'>Total minted : {data.toString()} / 400 </p> 
         }
       </div>    
     ) 

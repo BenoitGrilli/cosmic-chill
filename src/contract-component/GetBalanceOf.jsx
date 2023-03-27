@@ -1,8 +1,6 @@
 import React from 'react';
 import { useContractRead, useContract, useAddress } from "@thirdweb-dev/react";
-
-const contractAddress  = "0x12E0bFcC3c4D7cbbA8636464AAFa1044b20ddA0F"
-
+import {contractAddress} from '../components/contract';
 
  export default function GetBalanceOf() {
   const address = useAddress();
@@ -11,7 +9,7 @@ const contractAddress  = "0x12E0bFcC3c4D7cbbA8636464AAFa1044b20ddA0F"
 
   if (isError) {
     return (
-      <div>e
+      <div>
         <p >Something went wrong</p>
       </div>
     )
@@ -22,7 +20,7 @@ const contractAddress  = "0x12E0bFcC3c4D7cbbA8636464AAFa1044b20ddA0F"
             {isLoading ?
               <p className='text-white'>Loading ...</p>
             :
-        <p>You own : {data.toString()} / 200 </p> 
+        <p>You own : {data.toString()} / 400 </p> 
         }
       </div>    
     ) 

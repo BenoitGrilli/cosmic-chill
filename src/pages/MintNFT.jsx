@@ -10,8 +10,9 @@ import SomethingWentWrong from "./SomethingWentWrong";
 
 import backgroundImage from "../images/background-2.jpg";
 import Navbar from "../components/Navbar";
-
-const contractAddress = "0x12E0bFcC3c4D7cbbA8636464AAFa1044b20ddA0F";
+import {contractAddress} from '../components/contract';
+import ButtonMint from "../components/ButtonMint";
+import ButtonMintERC20 from "../components/ButtonMintERC20";
 
 
 const backgroundStyle = {
@@ -24,7 +25,7 @@ const backgroundStyle = {
 export default function MintPage() {
 
 
-const { contract } = useContract("0x12E0bFcC3c4D7cbbA8636464AAFa1044b20ddA0F");
+const { contract } = useContract({contractAddress});
 
 // hook nft du contrat
 // const { data: nfts, isLoading, isError } = useNFTs(contract);
@@ -102,12 +103,13 @@ return(
                </div>
 
                <div className="flex flex-col justify-center">
-                 <Web3Button
+                 {/* <Web3Button
                   contractAddress={contractAddress}
-                  action={(contract) => {contract.erc721.claim(1)}}
+                  action={(contract) => {contract.erc721.mint(1)}}
                 >
                 Mint</Web3Button>
-               
+                */}
+               <ButtonMint/>
                 
   
               </div>

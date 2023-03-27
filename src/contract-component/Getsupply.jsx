@@ -1,7 +1,7 @@
 import React from 'react';
 import { useContractRead, useContract } from "@thirdweb-dev/react";
+import {contractAddress} from '../components/contract';
 
-const contractAddress  = "0x12E0bFcC3c4D7cbbA8636464AAFa1044b20ddA0F"
 
  export default function GetSupply() {
   const { contract } = useContract(contractAddress);

@@ -6,13 +6,9 @@ import Navbar from "../components/Navbar";
 
 import GetSupplyERC20 from "../contract-component/token-component/GetERC20Supply";
 import GetERC20BalanceOf from "../contract-component/token-component/GetERC20BalanceOf";
+import ButtonMintERC20 from "../components/ButtonMintERC20";
 
-const goerli = "https://zhejiang.beaconcha.in/address/0x12e0bfcc3c4d7cbba8636464aafa1044b20dda0f";
-const goerliLink = (
-  <a className="text-blue-600" href={goerli} target="_blank" rel="noopener noreferrer">
-    {goerli}
-  </a>
-);
+// import ButtonMintERC20 from "../components/ButtonMintERC20";
 
 const MintToken = () => {
   const backgroundStyle = {
@@ -41,7 +37,20 @@ const MintToken = () => {
     <>
       <div style={backgroundStyle}>
         <Navbar />
+        <div className="container mx-auto flex  items-center justify-center flex-col p-6">
+          <h1 className="pt-6 text-5xl">
+          <GetERC20BalanceOf/>
+          </h1>
+          <h2 className="pt-6 pb-4 text-1xl">
+          <GetSupplyERC20/>
+          </h2>
+          <ButtonMintERC20/>
+          
+        {/* <ButtonMintERC20/> */}
+    
+        
 
+        </div>
        
         <section className="text-gray-600 body-font ">
           <div className="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
@@ -60,17 +69,7 @@ const MintToken = () => {
       
                 <ButtonTemplate to="https://goerlifaucet.com/" text="GOERLI FAUCET" />
               </div>
-              <div className="container mx-auto flex  items-center justify-center flex-col p-6">
-          <h1 className="pt-6 text-5xl">
-          <GetERC20BalanceOf/>
-          </h1>
-          <h2 className="pt-6 text-1xl">
-          <GetSupplyERC20/>
-          </h2>
-    
-        
 
-        </div>
             </div>
           </div>
         </section>

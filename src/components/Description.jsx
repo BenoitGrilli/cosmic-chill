@@ -1,5 +1,4 @@
 import React from "react";
-import ButtonTemplate from "./ButtonTemplate";
 
 function Description() {
   return (

@@ -1,7 +1,8 @@
 import React from 'react';
 import { useContractRead, useContract } from "@thirdweb-dev/react";
 
-const contractAddress  = "0xB6Ba71907421B9e244e35a26cDE4Db3535316BCc"
+
+const contractAddress  = "0x4c336A987bB0BeB3bbC8aB90e54b90d66fD02Acf"
 
  export default function GetSupplyERC20() {
   const { contract } = useContract(contractAddress);

@@ -12,11 +12,13 @@ import Navbar from "../components/Navbar";
 import BorderCard from "../components/BorderCard";
 import GetUserAddress from "../contract-component/GetUserAddress";
 
+import {contractAddress} from '../components/contract';
+
 
 export default function YourCollection() {
+
   const background = "bg-gradient-to-b from-blue-900 via-indigo-900 to-purple-900";
-  const { contract } = useContract(
-    "0x12E0bFcC3c4D7cbbA8636464AAFa1044b20ddA0F"
+  const { contract } = useContract(contractAddress
   );
   const address = useAddress();
 
@@ -49,7 +51,7 @@ export default function YourCollection() {
         ) : (
           <div class="mx-auto flex flex-row flex-wrap justify-center items-center">
           {nfts
-              ?.filter((nft) => nft.owner == address)
+              ?.filter((nft) => nft.owner === address)
               .map((nft) => (
                 <div className="p-6 md:p-6">
                   <BorderCard>

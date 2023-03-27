@@ -4,17 +4,25 @@ import GetContractAddress from "../contract-component/GetContractAddress";
 import backgroundImage from "../images/banner0.png";
 import Navbar from "../components/Navbar";
 import BorderCard from "../components/BorderCard";
+import {contractAddress} from '../components/contract';
+
 
 export default function Gallery() {
 
-const { contract } = useContract("0x12E0bFcC3c4D7cbbA8636464AAFa1044b20ddA0F");
+const { contract } = useContract(contractAddress);
 
 
 const backgroundStyle = {
   backgroundImage: `url(${backgroundImage})`,
-  backgroundSize: "cover",
+  backgroundRepeat: "repeat",
   backgroundPosition: "center",
-  height: "100vh",}
+  backgroundSize: "auto",
+  minHeight: "100vh",
+};
+
+
+
+
 
 const address = useAddress();
 
@@ -42,7 +50,7 @@ return(
   {isLoading ? (
     <p className="text-center text-2xl"> Loading ... </p>
   ) : (
-   <div class="mx-auto flex flex-row flex-wrap justify-center items-center">
+   <div class="mx-auto grid grid-cols-4 gap-4 flex-wrap justify-center items-center">
       {nfts?.map((nft) => (
         <div >
           <div>

@@ -1,15 +1,12 @@
 import { Web3Button } from "@thirdweb-dev/react";
-import { contractAddress, contractAbi } from "./contract";
-
+import { contractAddress} from "./contract";
 const ButtonMint = () => {
   return (
     <Web3Button
       contractAddress={contractAddress}
-      contractAbi={contractAbi}
-      // Call the name of your smart contract function
-      action={(contract) => contract.call("mint")}
+      action={(contract) => contract.erc721.claim(1)}
     >
-      Mint your token
+      MINT COSMIC NFT
     </Web3Button>
   );
 };
