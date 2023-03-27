@@ -47,7 +47,7 @@ export default function YourCollection() {
         </div>
 
         {isLoading ? (
-          <p className="text-white text-center text-2xl" > Loading ... </p>
+          <p className="pt-36 text-white text-center text-2xl" > Loading ... </p>
         ) : (
           <div class="mx-auto flex flex-row flex-wrap justify-center items-center">
           {nfts

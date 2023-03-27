@@ -48,7 +48,7 @@ return(
       
     </div>
   {isLoading ? (
-    <p className="text-center text-2xl"> Loading ... </p>
+    <p className="pt-36 text-center text-2xl"> Loading ... </p>
   ) : (
    <div class="mx-auto grid grid-cols-4 gap-4 flex-wrap justify-center items-center">
       {nfts?.map((nft) => (
