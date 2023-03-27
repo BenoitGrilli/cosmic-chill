@@ -27,7 +27,7 @@ const backgroundStyle = {
 const address = useAddress();
 
 // hook les nft d'un user 
-const { data: nfts, isLoading, isError } = useNFTs(contract, address);
+const { data: nfts, isLoading, isError } = useNFTs(contract, { start: 0, count: 20 });
 
 
 
