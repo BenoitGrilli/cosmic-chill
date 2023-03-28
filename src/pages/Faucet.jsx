@@ -62,13 +62,18 @@ const MintToken = () => {
             <div className="text-center lg:w-2/3 w-full">
               <h1 style={titleStyle}>Planets tokens are used to mint Cosmic Chill NFTs</h1>
               <p style={descriptionStyle}>
-                Claim yours for free using the Planet Faucet. To complete the transaction, you'll need Goerli in your
-                wallet. If you don't have any, get some from the Goerli Faucet.
+                Claim yours for free using the Planet Faucet. To complete the transaction, you'll need ETH-TEST in your Zheijang Wallet your
+                wallet. If you don't have any, get some from the Zhejiang Faucet.
               </p>
+              <div>
               <div className="flex justify-center space-x-4">
-      
-                <ButtonTemplate to="https://goerlifaucet.com/" text="GOERLI FAUCET" />
+                <ButtonTemplate to="https://chainlist.org/?testnets=true&search=zheijang" text="Add Zheijang to your metamask" />
               </div>
+              <div className="flex justify-center space-x-4 pt-5">
+                <ButtonTemplate to="https://zhejiang-faucet.pk910.de/" text="Zhejiang FAUCET" />
+              </div>
+              </div>
+              
 
             </div>
           </div>

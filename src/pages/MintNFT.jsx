@@ -13,6 +13,7 @@ import Navbar from "../components/Navbar";
 import {contractAddress} from '../components/contract';
 import ButtonMint from "../components/ButtonMint";
 import ButtonMintERC20 from "../components/ButtonMintERC20";
+import GetERC20BalanceOf from "../contract-component/token-component/GetERC20BalanceOf";
 
 
 const backgroundStyle = {
@@ -87,8 +88,8 @@ return(
         </li>
       </ul>
              </p>
-             <p className="text-pink-500 mt-2 text-center">You need 1 PLANET TOKEN TO MINT 1 NFT</p>
-                
+             <p className="text-pink-500 mt-2 text-center">You need 1 PLANET TOKEN (PLT) TO MINT 1 NFT</p>
+                <GetERC20BalanceOf/>
                 <ButtonTemplate to="/faucet" text="GET PLANET TOKEN FOR FREE"/>
            </div>
   
