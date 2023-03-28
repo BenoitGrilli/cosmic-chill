@@ -10,8 +10,8 @@ const Astronaut = () => {
       image,
       { y: 0 },
       {
-        y: 100,
-        duration: 1,
+        y: 80,
+        duration: 1.4,
         ease: Power1.easeInOut,
         yoyo: true,
         repeat: -1,

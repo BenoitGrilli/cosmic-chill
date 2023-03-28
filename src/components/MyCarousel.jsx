@@ -35,35 +35,35 @@ export default function MyCarousel() {
     transitionDuration={6000}
     containerClass="carousel-container"
     dotListClass="custom-dot-list-style"
-    itemClass="carousel-item-padding-40-px"
+    itemClass="carousel-item-padding-40-px scale-90"
     >
 
       <div class="p-8 hover:scale-105 duration-300">
-        <img src="/images/43.png"></img>
+        <img src="/images/images-carrousel/83.png"></img>
         <Button/>
       </div>
       <div class="p-8 hover:scale-105 duration-300">
-        <img src="/images/3.png"></img>
+        <img src="/images/images-carrousel/84.png"></img>
         <Button/>
       </div>
       <div class="p-8 hover:scale-105 duration-300">
-        <img src="/images/1.png"></img>
+        <img src="/images/images-carrousel/85.png"></img>
         <Button/>
       </div>
       <div class="p-8 hover:scale-105 duration-300">
-        <img src="/images/2.png"></img>
+        <img src="/images/images-carrousel/86.png"></img>
         <Button/>
       </div>
       <div class="p-8 hover:scale-105 duration-300">
-        <img src="/images/94.png"></img>
+        <img src="/images/images-carrousel/87.png"></img>
         <Button/>
       </div>
       <div class="p-8 hover:scale-105 duration-300">
-        <img src="/images/96.png"></img>
+        <img src="/images/images-carrousel/88.png"></img>
         <Button/>
       </div>
       <div class="p-8 hover:scale-105 duration-300">
-        <img src="/images/95.png"></img>
+        <img src="/images/images-carrousel/89.png"></img>
         <Button/>
       </div>
     </Carousel>

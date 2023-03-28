@@ -7,6 +7,7 @@ import Navbar from "../components/Navbar";
 import GetSupplyERC20 from "../contract-component/token-component/GetERC20Supply";
 import GetERC20BalanceOf from "../contract-component/token-component/GetERC20BalanceOf";
 import ButtonMintERC20 from "../components/ButtonMintERC20";
+import AstronautWelcome from "../components/AstronautWelcome";
 
 // import ButtonMintERC20 from "../components/ButtonMintERC20";
 
@@ -38,6 +39,8 @@ const MintToken = () => {
       <div style={backgroundStyle}>
         <Navbar />
         <div className="container mx-auto flex  items-center justify-center flex-col p-6">
+      
+          
           <h1 className="pt-6 text-5xl">
           <GetERC20BalanceOf/>
           </h1>
@@ -45,6 +48,7 @@ const MintToken = () => {
           <GetSupplyERC20/>
           </h2>
           <ButtonMintERC20/>
+          <AstronautWelcome/>
           
         {/* <ButtonMintERC20/> */}
     
@@ -54,11 +58,7 @@ const MintToken = () => {
        
         <section className="text-gray-600 body-font ">
           <div className="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
-            <img
-              className="lg:w-1/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded"
-              alt="planet token"
-              src="/images/logo-token.png"
-            />
+
             <div className="text-center lg:w-2/3 w-full">
               <h1 style={titleStyle}>Planets tokens are used to mint Cosmic Chill NFTs</h1>
               <p style={descriptionStyle}>

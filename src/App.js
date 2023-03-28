@@ -2,24 +2,19 @@ import React from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 
-import SplashPage from "./pages/SplashPage";
-import NavBar from "./components/Navbar";
 
 import Error404 from "./pages/Error404";
 
-import MyCarousel from "./components/MyCarousel";
 import Astronaut from "./components/Astronaut";
-import MintToken from "./pages/Faucet";
+
 import ButtonMint from "./components/ButtonMint";
 
 import MintPage from "./pages/MintNFT";
-import { ThirdwebAuthProvider, ThirdwebProvider } from "@thirdweb-dev/react";
+import { ThirdwebProvider } from "@thirdweb-dev/react";
 import { Zhejiang } from "@thirdweb-dev/chains";
 
 import UnderConstruction from "./components/UnderConstruction";
 import YourCollection from "./pages/YourCollection";
-
-import Navbar from "./components/Navbar";
 import GetSupply from "./contract-component/Getsupply";
 import Faucet from "./pages/Faucet";
 
