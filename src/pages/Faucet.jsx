@@ -67,7 +67,7 @@ const MintToken = () => {
               </p>
               <div>
               <div className="flex justify-center space-x-4">
-                <ButtonTemplate to="https://chainlist.org/?testnets=true&search=zheijang" text="Add Zheijang to your metamask" />
+                <ButtonTemplate to="https://chainlist.org/?testnets=true&search=zhejiang" text="Add Zhejiang to your metamask" />
               </div>
               <div className="flex justify-center space-x-4 pt-5">
                 <ButtonTemplate to="https://zhejiang-faucet.pk910.de/" text="Zhejiang FAUCET" />
