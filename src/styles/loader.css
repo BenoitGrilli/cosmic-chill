@@ -1,0 +1,95 @@
+body {
+    font-family: "Space Mono";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(63, 56, 71);
+    margin: 0;
+    height: 100vh;
+    text-align: center;
+}
+
+.loading-title {
+    position: relative;
+    bottom: 35px;
+    font-size: 36px;
+    color: white;
+}
+
+/* #region Orbit Loader */
+
+.orbit-loader {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: aquamarine;
+    position: relative;
+    outline: 5px black solid;
+    animation: planet 2s infinite ease-in-out;
+    box-shadow: 10px 10px 0 2.5px rgba(0, 0, 0, 0.2);
+}
+
+.orbit-loader::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    content: "";
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    animation: orbiter1 1.5s infinite ease-in-out;
+    outline: 5px black solid;
+    box-shadow: 10px 10px 0 2.5px rgba(0, 0, 0, 0.2);
+}
+
+.orbit-loader::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    content: "";
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    animation: orbiter1 1.5s infinite ease-in-out;
+    animation-delay: 0.75s;
+    outline: 5px black solid;
+    box-shadow: 10px 10px 0 2.5px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes planet {
+    0% {
+        top: 10px;
+    }
+    50% {
+        top: -10px;
+    }
+    100% {
+        top: 10px;
+    }
+}
+
+@keyframes orbiter1 {
+    0% {
+        z-index: 1;
+        top: 100px;
+        left: 100px;
+    }
+    50% {
+        top: -25px;
+        left: -25px;
+    }
+    70% {
+        z-index: -1;
+    }
+    100% {
+        top: 100px;
+        left: 100px;
+    }
+}
+
+/* #endregion */
