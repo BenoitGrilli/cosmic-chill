@@ -5,6 +5,7 @@ import MyCarousel from "../components/MyCarousel";
 import "animate.css";
 import Typewriter from "typewriter-effect";
 import Navbar from "../components/Navbar";
+import NavbarV2 from "../components/NavbarV2";
 
 import Astronaut from "../components/Astronaut";
 import ButtonTemplate from "../components/ButtonTemplate";
@@ -25,7 +26,7 @@ function Home() {
     <div>
 
       <section className="text-gray-600 body-font" style={backgroundStyle}>
-      <Navbar /> 
+      <NavbarV2 /> 
       <WelcomeTyping/>
 
       

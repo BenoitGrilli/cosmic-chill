@@ -8,6 +8,7 @@ import GetSupplyERC20 from "../contract-component/token-component/GetERC20Supply
 import GetERC20BalanceOf from "../contract-component/token-component/GetERC20BalanceOf";
 import ButtonMintERC20 from "../components/ButtonMintERC20";
 import AstronautWelcome from "../components/AstronautWelcome";
+import NavbarV2 from "../components/NavbarV2";
 
 // import ButtonMintERC20 from "../components/ButtonMintERC20";
 
@@ -37,7 +38,7 @@ const MintToken = () => {
   return (
     <>
       <div style={backgroundStyle}>
-        <Navbar />
+        <NavbarV2/>
         <div className="container mx-auto flex  items-center justify-center flex-col p-6">
       
           

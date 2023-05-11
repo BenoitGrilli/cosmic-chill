@@ -13,6 +13,7 @@ import BorderCard from "../components/BorderCard";
 import GetUserAddress from "../contract-component/GetUserAddress";
 
 import {contractAddress} from '../components/contract';
+import NavbarV2 from "../components/NavbarV2";
 
 
 export default function YourCollection() {
@@ -37,7 +38,7 @@ export default function YourCollection() {
   return (
     <>
       <div className={background}>
-        <Navbar />
+        <NavbarV2 />
         <div className="py-20 text-center">
           <h1 className="text-white text-4xl font-bold mb-8">YOUR COLLECTION</h1>
           <div className="flex flex-col items-center">

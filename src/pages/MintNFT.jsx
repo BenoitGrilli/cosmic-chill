@@ -14,6 +14,7 @@ import {contractAddress} from '../components/contract';
 import ButtonMint from "../components/ButtonMint";
 import ButtonMintERC20 from "../components/ButtonMintERC20";
 import GetERC20BalanceOf from "../contract-component/token-component/GetERC20BalanceOf";
+import NavbarV2 from "../components/NavbarV2";
 
 
 const backgroundStyle = {
@@ -51,7 +52,7 @@ return(
 <>
 
 <div style={backgroundStyle}>
-<Navbar/>
+<NavbarV2/>
 
 <div className="mx-auto flex min-h-screen max-w-6xl flex-col p-6 md:p-12">
         <header className="flex flex-col items-center justify-center pt-2">

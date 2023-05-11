@@ -5,6 +5,7 @@ import backgroundImage from "../images/banner0.png";
 import Navbar from "../components/Navbar";
 import BorderCard from "../components/BorderCard";
 import {contractAddress} from '../components/contract';
+import NavbarV2 from "../components/NavbarV2";
 
 
 export default function Gallery() {
@@ -41,7 +42,7 @@ if (isError) {
 
 return(
 <div className=" text-white" style={backgroundStyle}>
-<Navbar />
+<NavbarV2 />
     <div className="text-center">
       <h1 className="pt-8 text-4xl">GALLERY</h1>
       <GetContractAddress/>
