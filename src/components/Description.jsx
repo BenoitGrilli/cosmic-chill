@@ -9,6 +9,19 @@ function Description() {
         distant and unknown worlds, offering an unforgettable relaxation
         experience to escape the stress of everyday life.
       </p>
+      
+      <div className="mb-8">
+        <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+          <iframe
+            className="absolute top-0 left-0 w-full h-full rounded-lg"
+            src="https://www.youtube.com/embed/2yNevx70Rb0"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </div>
+      </div>
+
       <p className="text-lg text-gray-200 mb-8">
         Owning a Cosmic Chill NFT means becoming a space explorer and enjoying
         exclusive ownership of a unique beach in the metaverse. Join our
@@ -28,8 +41,6 @@ function Description() {
           A chance to join a community of like-minded space explorers
         </li>
       </ul>
-
-  
     </div>
   );
 }

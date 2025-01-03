@@ -1,16 +1,13 @@
 import React from "react";
-import BuyButton from "../components/BuyButton";
 import Description from "../components/Description";
 import MyCarousel from "../components/MyCarousel";
 import "animate.css";
-import Typewriter from "typewriter-effect";
-import Navbar from "../components/Navbar";
 import NavbarV2 from "../components/NavbarV2";
 
 import Astronaut from "../components/Astronaut";
 import ButtonTemplate from "../components/ButtonTemplate";
 import WelcomeTyping from "../components/WelcomeTyping"
-import AstronautWelcome from "../components/AstronautWelcome";
+
 
 
 function Home() {
@@ -28,6 +25,7 @@ function Home() {
       <section className="text-gray-600 body-font" style={backgroundStyle}>
       <NavbarV2 /> 
       <WelcomeTyping/>
+
 
       
         <div class="pr-6 pl-6 pt-0 flex flex-col md:flex-row">
